@@ -1,46 +1,39 @@
-  <html>
-  	<head>
-  	<script>
-    			function addition()	{
-    				var no1=document.getElementById("no1").value;
-    				var no2=document.getElementById("no2").value;
-    				answer=parseInt(no1)+parseInt(no2);
-    				document.getElementById("result").value=answer;
-    				//alert();
-     			}
+<html>
+  <head>
+    <script>
+      function addition()	{
+        var no1=document.getElementById("no1").value;
+        var no2=document.getElementById("no2").value;
+        answer=parseInt(no1)+parseInt(no2);
+        document.getElementById("result").value=answer;
+      }
 
-    			function subtraction() {
-    				var no1=document.getElementById("no1").value;
-    				var no2=document.getElementById("no2").value;
-    				answer=parsInt(no1)-parseInt(no2);
-    				document.getElementById("result").value=answer;
-
-     			}
-
-
-
-  	</script>
-  		</head>
-  	<body>
-      		<table>
-        			<tr>
-        					<td>number1</td>
-        					<td><input type=number id=no1></td>
-        			</tr>
-        			<tr>
-        					<td>number2</td>
-        					<td><input type=number id=no2></td>
-        			</tr>
-        			 <tr>
-        				<td><input onclick=addition() type=radio name=calculate>addition</td>
-        				<td><input onclick=subtraction() type=radio name=calculate>subtraction</td>
-        			</tr>
-        			<tr>
-        				<td>Result</td>
-        				<td><input type=number id=result></td>
-        			</tr>
-
-      		</table>
-  	</body>
-  </html>
-
+      function subtraction() {
+        var no1=document.getElementById("no1").value;
+        var no2=document.getElementById("no2").value;
+        answer=parsInt(no1)-parseInt(no2);
+        document.getElementById("result").value=answer;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>number1</td>
+        <td><input type=number id=no1></td>
+      </tr>
+      <tr>
+        <td>number2</td>
+        <td><input type=number id=no2></td>
+      </tr>
+      <tr>
+        <td><input onclick=addition() type=radio name=calculate>addition</td>
+        <td><input onclick=subtraction() type=radio name=calculate>subtraction</td>
+      </tr>
+      <tr>
+        <td>Result</td>
+        <td><input type=number id=result></td>
+      </tr>
+    </table>
+  </body>
+</html>

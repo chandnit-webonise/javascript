@@ -1,47 +1,37 @@
-  <!DOCTYPE html>
-  <html>
+<!DOCTYPE html>
+<html>
   <body>
+    <p>Click "Open"</p>
+    <button onclick="windowopenFunc()">Open window</button>
+    <button onclick="timeoutFun()">close exec</button>
+    <script>
 
-       <p>Click "Open"</p>
+      var timer1,timer2,timer3;
 
-      <button onclick="windowopenFunc()">Open window</button>
-      <button onclick="timeoutFun()">close exec</button>
+      function windowopenFunc() {
 
-      <script>
+        var web1=window.open("http://www.google.com");
+        var web2=window.open("http://www.flipkart.com");
+        var web3=window.open("http://www.weboniselab.com");
 
-        var timer1,timer2,timer3;
+        timer1=setTimeout(function() {
+          web1.window.close();
+        }, 5000);
 
-          function windowopenFunc() {
-          	var web1=window.open("http://www.google.com");
-          	var web2=window.open("http://www.flipkart.com");
-          	var web3=window.open("http://www.weboniselab.com");
+        timer2=setTimeout(function() {
+          web2.window.close();
+        }, 7000);
 
+        timer3=setTimeout(function() {
+          web3.window.close();
+        }, 9000);
+      }
 
-          	timer1=setTimeout(function()
-          	{
-          	    web1.window.close();
-              	}, 5000);
-
-                timer2=setTimeout(function()
-          	{
-          		web2.window.close();
-          	}, 7000);
-
-
-          	 timer3=setTimeout(function()
-          	{
-          	    web3.window.close();
-              	}, 9000);
-
-          }
-
-          function timeoutFun() {
-          	clearTimeout(timer1);
-          	clearTimeout(timer2);
-          	clearTimeout(timer3);
-
-          }
+      function timeoutFun() {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
+      }
     </script>
   </body>
-  </html>
-
+</html>
